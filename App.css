@@ -1,0 +1,151 @@
+* {
+  filter: sepia(20%);
+  filter: opacity(93%);
+  filter: saturate(96%);
+  filter: drop-shadow(8px 8px 20px #e3ceb9);
+}
+
+body {
+  background: linear-gradient(#ebdbcb, #ebdbcb);
+}
+
+#drum-machine {
+  border: 50px groove #cda882;
+  border-radius: 5%;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  display: grid;
+  width: 800px;
+  height: 500px;
+  background-color: #eadbcb;
+  grid-template-columns: 15% 70% 15%;
+  grid-template-rows: 20% 60% 20%;
+  grid-template-areas:
+    "release day ."
+    "buttons buttons buttons"
+    ". display artist";
+}
+
+header {
+  grid-area: release;
+  align-self: start;
+  justify-self: start;
+  padding: 5px;
+  font-family: 'Courier New', Courier, monospace;
+  font-style: oblique;
+  font-size: 10px;
+}
+
+h1 {
+  grid-area: day;
+  align-self: center;
+  justify-self: center;
+  border-bottom: 5px ridge #e7ca70;
+  border-width: thick;
+  padding-bottom: 10px;
+  border-radius: 10%;
+  font-family: 'Courier New', Courier, monospace;
+  font-style: oblique;
+  font-size: 50px;
+}
+
+#display {
+  grid-area: display;
+  align-self: center;
+  justify-self: center;
+  border-top: 5px ridge #e7ca70;
+  border-width: thick;
+  border-radius: 10%;
+  font-family: 'Courier New', Courier, monospace;
+  font-style: oblique;
+  font-size: 20px;
+}
+
+footer {
+  grid-area: artist;
+  align-self: end;
+  justify-self: end;
+  padding: 5px;
+  font-family: 'Courier New', Courier, monospace;
+  font-style: oblique;
+  font-size: 10px;
+}
+
+.drum-pad {
+  padding: 20px;
+  font-size: 30px;
+  margin: 40px;
+  border-radius: 50%;
+  height: 60px;
+  line-height: 0;
+  width: 60px;
+  text-align: center;
+  padding-left: 16.5px;
+  border: 2px solid #672008;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #cda882;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  transition-duration: 1s;
+  cursor: pointer;
+}
+
+.drum-pad:hover {
+  background-color: #eadbcb;
+}
+
+#buttons {
+  grid-area: buttons;
+  align-self: center;
+  justify-self: stretch;
+  margin-left: 50px;
+}
+
+@media screen and (max-width: 500px) {
+  * {
+    filter: drop-shadow(4px 4px 10px #e3ceb9);
+  }
+
+  #drum-machine {
+    border: 25px groove #cda882;
+    padding: 5px;
+    width: 400px;
+    height: 250px;
+  }
+
+  header {
+    padding: 2.5px;
+    font-size: 5px;
+  }
+
+  h1 {
+    border-bottom: 2.5px ridge #e7ca70;
+    padding-bottom: 5px;
+    font-size: 25px;
+  }
+
+  #display {
+    border-top: 2.5px ridge #e7ca70;
+    font-size: 10px;
+  }
+
+  footer {
+    padding: 2.5px;
+    font-size: 5px;
+  }
+
+  .drum-pad {
+    padding: 10px;
+    font-size: 15px;
+    margin: 20px;
+    height: 30px;
+    width: 30px;
+    padding-left: 8.25px;
+    border: 1px solid #672008;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
+  }
+
+  #buttons {
+    margin-left: 25px;
+  }
+}
